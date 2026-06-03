@@ -298,3 +298,77 @@ a {
     line-height: 1.6;
     flex: 1;
 }
+
+/* =====================
+   POPULAR POSTS
+===================== */
+.popular-posts {
+    padding: 60px 8%;
+    background-color: #f9f9f9;
+}
+
+.popular-posts__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.popular-posts__title {
+    font-size: 30px;
+    font-weight: 800;
+    color: #1a1a2e;
+}
+
+/* =====================
+   FOOTER
+===================== */
+.footer {
+    background-color: #1a1a2e;
+    color: #fff;
+    padding: 40px 8%;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.footer__pfp {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #7B61FF;
+    flex-shrink: 0;
+}
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer__name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.footer__contact {
+    font-size: 13px;
+    color: #aaa;
+}
+
+.footer__contact a {
+    color: #7B61FF;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.footer__contact a:hover {
+    opacity: 0.7;
+}
+
+.footer__discord {
+    font-size: 13px;
+    color: #aaa;
+}
