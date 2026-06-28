@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header class="header">
         <a href="index.html" class="header__logo">
             <img src="assets/logo.png" alt="Logo">
@@ -18,13 +17,12 @@
             <a href="" class="nav__link">
                 <img src="assets/lupa.png" alt="search" class="nav__img">
             </a>
-            <a href="" class="button--purple">Contactame</a>
+            <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">🌙</button>
+            <a href="https://mail.google.com/mail/?view=cm&to=Hanselygustavo@gmail.com" target="_blank" class="button--purple">Contactame</a>
         </nav>
     </header>
 
     <main class="main">
-
-        <!-- PERFIL PRINCIPAL -->
         <section class="creator-hero">
             <img src="assets/pfppp.webp" alt="Gustavo Ramirez" class="creator-hero__img">
             <div class="creator-hero__info">
@@ -39,108 +37,51 @@
             </div>
         </section>
 
-        <!-- DATOS PERSONALES -->
         <section class="creator-section">
             <h2 class="creator-section__title">Datos</h2>
             <div class="creator-cards">
-                <div class="creator-card">
-                    <span class="creator-card__label">País</span>
-                    <span class="creator-card__value">República Dominicana 🇩🇴</span>
-                </div>
-                <div class="creator-card">
-                    <span class="creator-card__label">Edad</span>
-                    <span class="creator-card__value">16 años</span>
-                </div>
-                <div class="creator-card">
-                    <span class="creator-card__label">Estado</span>
-                    <span class="creator-card__value">Soltero</span>
-                </div>
-                <div class="creator-card">
-                    <span class="creator-card__label">Hobbies</span>
-                    <span class="creator-card__value">Programación, música, videojuegos, edición</span>
-                </div>
-                <div class="creator-card">
-                    <span class="creator-card__label">Hermanos</span>
-                    <span class="creator-card__value">Hansel, Alonso y Lourdes Marie Ramirez</span>
-                </div>
-                <div class="creator-card">
-                    <span class="creator-card__label">Correo</span>
-                    <span class="creator-card__value">Hanselygustavo@gmail.com</span>
-                </div>
+                <div class="creator-card"><span class="creator-card__label">País</span><span class="creator-card__value">República Dominicana 🇩🇴</span></div>
+                <div class="creator-card"><span class="creator-card__label">Edad</span><span class="creator-card__value">16 años</span></div>
+                <div class="creator-card"><span class="creator-card__label">Estado</span><span class="creator-card__value">Soltero</span></div>
+                <div class="creator-card"><span class="creator-card__label">Hobbies</span><span class="creator-card__value">Programación, música, videojuegos, edición</span></div>
+                <div class="creator-card"><span class="creator-card__label">Hermanos</span><span class="creator-card__value">Hansel, Alonso y Lourdes Marie Ramirez</span></div>
+                <div class="creator-card"><span class="creator-card__label">Correo</span><span class="creator-card__value">Hanselygustavo@gmail.com</span></div>
             </div>
         </section>
 
-        <!-- PADRES -->
         <section class="creator-section creator-section--gray">
             <h2 class="creator-section__title">Sus padres</h2>
             <p class="creator-section__desc">Silvia Succar y Disraeli Ramirez se conocieron en diciembre de 2005 como compañeros de trabajo. Con el tiempo iniciaron una relación y se casaron el 31 de marzo de 2008.</p>
             <img src="assets/padres.jpg" alt="Padres de Gustavo" class="creator-parents__img">
-
             <div class="creator-parents-grid">
-
-                <!-- Padre -->
                 <div class="creator-parent-card">
                     <div class="creator-parent-card__header">
                         <div class="creator-avatar">DR</div>
-                        <div>
-                            <h3 class="creator-parent-card__name">Disraeli Ramirez</h3>
-                            <span class="post__category">Padre</span>
-                        </div>
+                        <div><h3 class="creator-parent-card__name">Disraeli Ramirez</h3><span class="post__category">Padre</span></div>
                     </div>
                     <p class="creator-parent-card__bio">Nacido el 12/12/1973. Graduado en la UASD como ingeniero en sistemas. Programador y jefe en GM (Grupos Mallen).</p>
                     <div class="creator-parent-card__data">
-                        <div class="creator-card">
-                            <span class="creator-card__label">Edad</span>
-                            <span class="creator-card__value">52 años</span>
-                        </div>
-                        <div class="creator-card">
-                            <span class="creator-card__label">Padres</span>
-                            <span class="creator-card__value">Israel Ramirez y Lourdes Zorilla</span>
-                        </div>
-                        <div class="creator-card">
-                            <span class="creator-card__label">Hermanos</span>
-                            <span class="creator-card__value">Geovanna, Moises y Yomali Ramirez</span>
-                        </div>
-                        <div class="creator-card">
-                            <span class="creator-card__label">Hijos</span>
-                            <span class="creator-card__value">Gustavo, Hansel, Lourdes Marie y Alonso</span>
-                        </div>
+                        <div class="creator-card"><span class="creator-card__label">Edad</span><span class="creator-card__value">52 años</span></div>
+                        <div class="creator-card"><span class="creator-card__label">Padres</span><span class="creator-card__value">Israel Ramirez y Lourdes Zorilla</span></div>
+                        <div class="creator-card"><span class="creator-card__label">Hermanos</span><span class="creator-card__value">Geovanna, Moises y Yomali Ramirez</span></div>
+                        <div class="creator-card"><span class="creator-card__label">Hijos</span><span class="creator-card__value">Gustavo, Hansel, Lourdes Marie y Alonso</span></div>
                     </div>
                 </div>
-
-                <!-- Madre -->
                 <div class="creator-parent-card">
                     <div class="creator-parent-card__header">
                         <div class="creator-avatar creator-avatar--pink">SS</div>
-                        <div>
-                            <h3 class="creator-parent-card__name">Silvia Succar</h3>
-                            <span class="post__category">Madre</span>
-                        </div>
+                        <div><h3 class="creator-parent-card__name">Silvia Succar</h3><span class="post__category">Madre</span></div>
                     </div>
                     <p class="creator-parent-card__bio">Nacida el 11/7/1984. Graduada en la Universidad O&M en sistemas. Experta en software y socia en Banreservas.</p>
                     <div class="creator-parent-card__data">
-                        <div class="creator-card">
-                            <span class="creator-card__label">Edad</span>
-                            <span class="creator-card__value">42 años</span>
-                        </div>
-                        <div class="creator-card">
-                            <span class="creator-card__label">Padres</span>
-                            <span class="creator-card__value">Ibrahim Succar y Miguelina Pereyra</span>
-                        </div>
-                        <div class="creator-card">
-                            <span class="creator-card__label">Hermanos</span>
-                            <span class="creator-card__value">Mariam, Emely, Lisandra e Icenia Succar</span>
-                        </div>
-                        <div class="creator-card">
-                            <span class="creator-card__label">Hijos</span>
-                            <span class="creator-card__value">Gustavo, Hansel y Alonso Ramirez</span>
-                        </div>
+                        <div class="creator-card"><span class="creator-card__label">Edad</span><span class="creator-card__value">42 años</span></div>
+                        <div class="creator-card"><span class="creator-card__label">Padres</span><span class="creator-card__value">Ibrahim Succar y Miguelina Pereyra</span></div>
+                        <div class="creator-card"><span class="creator-card__label">Hermanos</span><span class="creator-card__value">Mariam, Emely, Lisandra e Icenia Succar</span></div>
+                        <div class="creator-card"><span class="creator-card__label">Hijos</span><span class="creator-card__value">Gustavo, Hansel y Alonso Ramirez</span></div>
                     </div>
                 </div>
-
             </div>
         </section>
-
     </main>
 
     <footer class="footer">
@@ -152,5 +93,16 @@
         </div>
     </footer>
 
+    <script>
+        function toggleTheme() {
+            const isDark = document.body.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            document.querySelector('.theme-toggle').textContent = isDark ? '☀️' : '🌙';
+        }
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark');
+            document.querySelector('.theme-toggle').textContent = '☀️';
+        }
+    </script>
 </body>
 </html>

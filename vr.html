@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header class="header">
         <a href="index.html" class="header__logo">
             <img src="assets/logo.png" alt="Logo">
         </a>
         <nav class="header__nav nav">
             <a href="index.html" class="nav__link nav__link--purple">Blog</a>
-            <a href="" class="nav__link">Sobre el creador</a>
+            <a href="creador.html" class="nav__link">Sobre el creador</a>
             <a href="" class="nav__link">
                 <img src="assets/lupa.png" alt="search" class="nav__img">
             </a>
-            <a href="" class="button--purple">Contactame</a>
+            <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">🌙</button>
+            <a href="https://mail.google.com/mail/?view=cm&to=Hanselygustavo@gmail.com" target="_blank" class="button--purple">Contactame</a>
         </nav>
     </header>
 
@@ -30,19 +30,13 @@
             </div>
             <h1 class="article__title">Cómo hacer que un juego luzca más atractivo con las nuevas tecnologías de realidad virtual e inteligencia artificial.</h1>
             <img src="assets/lol.png" alt="VR" class="article__img">
-            <p class="article__text">Google lleva muchos años invirtiendo en IA y aportando sus beneficios a personas, empresas y comunidades. Ya sea publicando investigaciones de vanguardia, creando productos útiles o desarrollando herramientas y recursos que faciliten el trabajo de otros, estamos comprometidos a hacer que la IA sea accesible para todos. La realidad virtual combinada con la inteligencia artificial está revolucionando la industria de los videojuegos, permitiendo experiencias inmersivas nunca antes vistas.
-                La realidad virtual combinada con la inteligencia artificial está revolucionando la industria de los videojuegos, permitiendo experiencias inmersivas nunca antes vistas. Gracias a estas tecnologías, los personajes pueden reaccionar de manera más natural a las decisiones de los jugadores, aprender de sus comportamientos y adaptarse a diferentes estilos de juego. Además, los entornos virtuales son cada vez más realistas e interactivos, generando una sensación de presencia que mejora significativamente la experiencia del usuario.
-            </p>
-            <img src="/assets/VR.jpg" alt="vr" class="article__img">
-             <p class="article__text">La inteligencia artificial (IA) y la realidad virtual (RV) son dos de las tecnologías más innovadoras de la actualidad, y su combinación está generando importantes cambios en múltiples sectores. En la industria de los videojuegos, estas herramientas permiten crear experiencias mucho más inmersivas y realistas, donde los jugadores pueden interactuar con personajes y entornos que responden de manera inteligente a sus acciones.</p>
-
-<p class="article__text">Además, la realidad virtual proporciona una sensación de presencia que hace que los jugadores se sientan parte del mundo digital. Al utilizar dispositivos especializados, es posible explorar escenarios tridimensionales, interactuar con objetos y vivir experiencias que antes solo podían imaginarse.</p>
-
-<p class="article__text">Sin embargo, el impacto de estas tecnologías va mucho más allá del entretenimiento. En el ámbito educativo, la IA y la realidad virtual permiten crear simulaciones interactivas que facilitan el aprendizaje de conceptos complejos. En la medicina, pueden utilizarse para entrenar profesionales de la salud mediante prácticas virtuales seguras y realistas.</p>
-
-<p class="article__text">A medida que la tecnología continúa avanzando, es probable que la integración entre la inteligencia artificial y la realidad virtual sea cada vez más común en nuestra vida diaria. Estas herramientas tienen el potencial de transformar la forma en que aprendemos, trabajamos y nos entretenemos.</p>
-
-<a href="index.html" class="read-more">← Volver al inicio</a>
+            <p class="article__text">Google lleva muchos años invirtiendo en IA y aportando sus beneficios a personas, empresas y comunidades. Ya sea publicando investigaciones de vanguardia, creando productos útiles o desarrollando herramientas y recursos que faciliten el trabajo de otros, estamos comprometidos a hacer que la IA sea accesible para todos. La realidad virtual combinada con la inteligencia artificial está revolucionando la industria de los videojuegos, permitiendo experiencias inmersivas nunca antes vistas. Gracias a estas tecnologías, los personajes pueden reaccionar de manera más natural a las decisiones de los jugadores, aprender de sus comportamientos y adaptarse a diferentes estilos de juego.</p>
+            <img src="assets/VR.jpg" alt="vr" class="article__img">
+            <p class="article__text">La inteligencia artificial (IA) y la realidad virtual (RV) son dos de las tecnologías más innovadoras de la actualidad, y su combinación está generando importantes cambios en múltiples sectores.</p>
+            <p class="article__text">Además, la realidad virtual proporciona una sensación de presencia que hace que los jugadores se sientan parte del mundo digital. Al utilizar dispositivos especializados, es posible explorar escenarios tridimensionales, interactuar con objetos y vivir experiencias que antes solo podían imaginarse.</p>
+            <p class="article__text">Sin embargo, el impacto de estas tecnologías va mucho más allá del entretenimiento. En el ámbito educativo, la IA y la realidad virtual permiten crear simulaciones interactivas que facilitan el aprendizaje de conceptos complejos.</p>
+            <p class="article__text">A medida que la tecnología continúa avanzando, es probable que la integración entre la inteligencia artificial y la realidad virtual sea cada vez más común en nuestra vida diaria.</p>
+            <a href="index.html" class="read-more">← Volver al inicio</a>
         </section>
     </main>
 
@@ -55,5 +49,16 @@
         </div>
     </footer>
 
+    <script>
+        function toggleTheme() {
+            const isDark = document.body.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            document.querySelector('.theme-toggle').textContent = isDark ? '☀️' : '🌙';
+        }
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark');
+            document.querySelector('.theme-toggle').textContent = '☀️';
+        }
+    </script>
 </body>
 </html>

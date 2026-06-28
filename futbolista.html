@@ -7,45 +7,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header class="header">
         <a href="index.html" class="header__logo">
             <img src="assets/logo.png" alt="Logo">
         </a>
         <nav class="header__nav nav">
-            <a href="" class="nav__link nav__link--purple">Blog</a>
+            <a href="index.html" class="nav__link nav__link--purple">Blog</a>
             <a href="creador.html" class="nav__link">Sobre el creador</a>
             <a href="" class="nav__link">
                 <img src="assets/lupa.png" alt="search" class="nav__img">
             </a>
-            <a href="" class="button--purple">Contactame</a>
+            <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">🌙</button>
+            <a href="https://mail.google.com/mail/?view=cm&to=Hanselygustavo@gmail.com" target="_blank" class="button--purple">Contactame</a>
         </nav>
     </header>
 
     <main>
         <article class="article">
-
             <div class="post__meta">
                 <span class="post__category">Sports</span>
                 <span class="post__date">13 March 2023</span>
             </div>
-
             <h1 class="article__title">Cómo ser futbolista profesional en 2023</h1>
-
             <img src="assets/iii.png" alt="Futbolista" class="article__img">
-
-            <p class="article__text">Desarrollar orgánicamente la visión holística del mundo de la innovación disruptiva a través de la diversidad y el empoderamiento en el lugar de trabajo implica fomentar un entorno donde las personas puedan aportar sus conocimientos, experiencias y perspectivas únicas para generar soluciones creativas a los desafíos actuales. La innovación disruptiva no surge únicamente de los avances tecnológicos, sino también de la capacidad de las organizaciones para adaptarse al cambio, promover la colaboración y aprovechar el talento humano en toda su diversidad.</p>
-
-            <p class="article__text">La diversidad en el lugar de trabajo permite reunir individuos con diferentes antecedentes culturales, educativos y profesionales, enriqueciendo el proceso de toma de decisiones y favoreciendo la aparición de nuevas ideas. Cuando las empresas valoran y respetan estas diferencias, se crea una cultura organizacional más inclusiva que impulsa la creatividad y fortalece la capacidad de innovación. Al mismo tiempo, el empoderamiento de los empleados les brinda la confianza y las herramientas necesarias para participar activamente en los procesos de mejora, asumir responsabilidades y proponer iniciativas que generen impacto positivo.</p>
-
+            <p class="article__text">Desarrollar orgánicamente la visión holística del mundo de la innovación disruptiva a través de la diversidad y el empoderamiento en el lugar de trabajo implica fomentar un entorno donde las personas puedan aportar sus conocimientos, experiencias y perspectivas únicas para generar soluciones creativas a los desafíos actuales.</p>
+            <p class="article__text">La diversidad en el lugar de trabajo permite reunir individuos con diferentes antecedentes culturales, educativos y profesionales, enriqueciendo el proceso de toma de decisiones y favoreciendo la aparición de nuevas ideas.</p>
             <img src="assets/futbol.webp" alt="Futbolista" class="article__img">
-
-            <p class="article__text">Una visión holística de la innovación requiere comprender la interconexión entre las personas, la tecnología, los procesos y el entorno social. Esto significa considerar no solo los beneficios económicos de una innovación, sino también sus efectos en la sociedad, el medio ambiente y la calidad de vida de las personas. Mediante el desarrollo continuo de habilidades, la promoción del aprendizaje colaborativo y el fortalecimiento de una cultura basada en la inclusión y la participación, las organizaciones pueden construir equipos más resilientes y preparados para enfrentar los retos del futuro.</p>
-
-            <p class="article__text">Además, la innovación disruptiva impulsada por la diversidad y el empoderamiento contribuye a la creación de soluciones más eficientes, sostenibles y adaptadas a las necesidades reales de los usuarios. Al fomentar espacios donde todas las voces sean escuchadas y valoradas, las empresas pueden identificar oportunidades de mejora que de otro modo pasarían desapercibidas. De esta manera, se fortalece la competitividad organizacional, se promueve el crecimiento sostenible y se impulsa una transformación positiva capaz de generar beneficios tanto para las organizaciones como para la sociedad en general.</p>
-
+            <p class="article__text">Una visión holística de la innovación requiere comprender la interconexión entre las personas, la tecnología, los procesos y el entorno social.</p>
+            <p class="article__text">Además, la innovación disruptiva impulsada por la diversidad y el empoderamiento contribuye a la creación de soluciones más eficientes, sostenibles y adaptadas a las necesidades reales de los usuarios.</p>
             <a href="index.html" class="read-more">← Volver al inicio</a>
-
         </article>
     </main>
 
@@ -58,5 +48,16 @@
         </div>
     </footer>
 
+    <script>
+        function toggleTheme() {
+            const isDark = document.body.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            document.querySelector('.theme-toggle').textContent = isDark ? '☀️' : '🌙';
+        }
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark');
+            document.querySelector('.theme-toggle').textContent = '☀️';
+        }
+    </script>
 </body>
 </html>

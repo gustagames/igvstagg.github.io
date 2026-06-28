@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,13 +17,13 @@
             <a href="" class="nav__link">
                 <img src="assets/lupa.png" alt="search" class="nav__img">
             </a>
+            <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">🌙</button>
             <a href="https://mail.google.com/mail/?view=cm&to=Hanselygustavo@gmail.com" target="_blank" class="button--purple">Contactame</a>
         </nav>
     </header>
 
     <main class="main">
 
-        <!-- BANNER HERO -->
         <section class="main__banner banner">
             <div class="banner__left banner-container">
                 <span class="banner__tag">Featured Post</span>
@@ -36,15 +36,12 @@
             </div>
         </section>
 
-        <!-- RECENT POSTS -->
         <section class="recent-posts">
-
             <div class="recent-posts__header">
                 <h2 class="recent-posts__title">Nuestro Reciente Post</h2>
                 <a href="https://es.wikipedia.org/wiki/Inteligencia_artificial" target="_blank" class="button--purple">View All</a>
             </div>
 
-            <!-- Post destacado grande -->
             <div class="featured-post">
                 <div class="featured-post__image">
                     <img src="assets/lol.png" alt="VR image">
@@ -60,9 +57,7 @@
                 </div>
             </div>
 
-            <!-- Grid de 3 cards -->
             <div class="posts-grid">
-
                 <article class="post-card">
                     <img src="assets/image0.png" alt="Ocean" class="post-card__img">
                     <div class="post-card__body">
@@ -101,20 +96,16 @@
                         <a href="futbolista.html" class="read-more">Read More...</a>
                     </div>
                 </article>
-
             </div>
         </section>
 
-        <!-- POPULAR POSTS -->
         <section class="popular-posts">
-
             <div class="popular-posts__header">
                 <h2 class="popular-posts__title">Popular Post</h2>
                 <a href="https://es.wikipedia.org/wiki/Deporte" target="_blank" class="button--purple">View All</a>
             </div>
 
             <div class="posts-grid">
-
                 <article class="post-card">
                     <img src="assets/image02.png" alt="Train" class="post-card__img">
                     <div class="post-card__body">
@@ -136,7 +127,7 @@
                             <span class="post__date">11 March 2023</span>
                         </div>
                         <h3 class="post-card__title">El mejor sitio web para investigar para tu próximo proyecto.</h3>
-                        <p class="post-card__excerpt">Aprovecha las oportunidades más accesibles para identificar una actividad de valor añadido aproximada para realizar pruebas beta. Supera la brecha digital con clics adicionales.</p>
+                        <p class="post-card__excerpt">Aprovecha las oportunidades más accesibles para identificar una actividad de valor añadido aproximada para realizar pruebas beta.</p>
                         <a href="https://es.wikipedia.org/wiki/Desarrollo_web" target="_blank" class="read-more">Read More...</a>
                     </div>
                 </article>
@@ -149,11 +140,10 @@
                             <span class="post__date">10 March 2023</span>
                         </div>
                         <h3 class="post-card__title">¿Cómo ser bailarín en 2023 con las habilidades adecuadas?</h3>
-                        <p class="post-card__excerpt">Desarrollar orgánicamente la visión holística del mundo de la innovación disruptiva a través de la diversidad y el empoderamiento en el lugar de trabajo. Estrategias de supervivencia para garantizar la proactividad.</p>
+                        <p class="post-card__excerpt">Desarrollar orgánicamente la visión holística del mundo de la innovación disruptiva a través de la diversidad y el empoderamiento en el lugar de trabajo.</p>
                         <a href="https://es.wikipedia.org/wiki/Danza" target="_blank" class="read-more">Read More...</a>
                     </div>
                 </article>
-
             </div>
         </section>
 
@@ -168,5 +158,16 @@
         </div>
     </footer>
 
+    <script>
+        function toggleTheme() {
+            const isDark = document.body.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            document.querySelector('.theme-toggle').textContent = isDark ? '☀️' : '🌙';
+        }
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark');
+            document.querySelector('.theme-toggle').textContent = '☀️';
+        }
+    </script>
 </body>
 </html>

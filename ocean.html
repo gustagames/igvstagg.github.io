@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header class="header">
         <a href="index.html" class="header__logo">
             <img src="assets/logo.png" alt="Logo">
         </a>
         <nav class="header__nav nav">
             <a href="index.html" class="nav__link nav__link--purple">Blog</a>
-            <a href="" class="nav__link">Sobre el creador</a>
+            <a href="creador.html" class="nav__link">Sobre el creador</a>
             <a href="" class="nav__link">
                 <img src="assets/lupa.png" alt="search" class="nav__img">
             </a>
-            <a href="" class="button--purple">Contactame</a>
+            <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">🌙</button>
+            <a href="https://mail.google.com/mail/?view=cm&to=Hanselygustavo@gmail.com" target="_blank" class="button--purple">Contactame</a>
         </nav>
     </header>
 
@@ -30,7 +30,7 @@
             </div>
             <h1 class="article__title">8 Reglas Para Viajar En El Oceano Que Necesitas Saber</h1>
             <img src="assets/image0.png" alt="Ocean" class="article__img">
-            <p class="article__text">Viajar por mar tiene muchas ventajas. Algunas de las ventajas de transportar mercancías por mar incluyen: se pueden enviar grandes volúmenes a precios más bajos que por aire. Además, el transporte marítimo es uno de los métodos más ecológicos de transporte de mercancías. Sin embargo, hay reglas importantes que debes conocer antes de embarcarte en cualquier aventura oceánica. Desde respetar las corrientes marítimas hasta conocer las señales de peligro, estas 8 reglas te garantizarán un viaje seguro y memorable.</p>
+            <p class="article__text">Viajar por mar tiene muchas ventajas. Algunas de las ventajas de transportar mercancías por mar incluyen: se pueden enviar grandes volúmenes a precios más bajos que por aire. Sin embargo, hay reglas importantes que debes conocer antes de embarcarte en cualquier aventura oceánica.</p>
             <p class="article__text">1. Respetar las corrientes marítimas y las rutas de navegación.</p>
             <p class="article__text">2. Conocer las señales de peligro y cómo interpretarlas.</p>
             <p class="article__text">3. Llevar equipo de seguridad adecuado en todo momento.</p>
@@ -39,8 +39,8 @@
             <p class="article__text">6. Mantener un plan de emergencia y comunicarse con otros.</p>
             <p class="article__text">7. Respetar la vida marina y no contaminar el entorno.</p>
             <p class="article__text">8. Invertir en formación y capacitación para viajar en el oceano con seguridad.</p>
-            <img src="/assets/ship.jpg" alt="Ship" class="article__img">
-            <p class="article__text">Viajar por mar ha sido una de las formas más importantes de transporte y exploración desde la antigüedad. A lo largo de la historia, los océanos han servido como rutas de comunicación entre continentes, facilitando el comercio, el intercambio cultural y el desarrollo económico de numerosas civilizaciones. En la actualidad, el transporte marítimo continúa siendo fundamental para la economía mundial, ya que una gran parte de las mercancías que se consumen diariamente son transportadas a través de barcos y embarcaciones de diferentes tamaños.</p>
+            <img src="assets/ship.jpg" alt="Ship" class="article__img">
+            <p class="article__text">Viajar por mar ha sido una de las formas más importantes de transporte y exploración desde la antigüedad. En la actualidad, el transporte marítimo continúa siendo fundamental para la economía mundial.</p>
             <a href="index.html" class="read-more">← Volver al inicio</a>
         </section>
     </main>
@@ -54,5 +54,16 @@
         </div>
     </footer>
 
+    <script>
+        function toggleTheme() {
+            const isDark = document.body.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            document.querySelector('.theme-toggle').textContent = isDark ? '☀️' : '🌙';
+        }
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark');
+            document.querySelector('.theme-toggle').textContent = '☀️';
+        }
+    </script>
 </body>
 </html>
