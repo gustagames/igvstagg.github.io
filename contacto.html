@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="header__logo">
+            <img src="assets/logo.png" alt="Logo">
+        </a>
+        <nav class="header__nav nav">
+            <a href="index.html" class="nav__link">Blog</a>
+            <a href="creador.html" class="nav__link">Sobre el creador</a>
+            <a href="" class="nav__link">
+                <img src="assets/lupa.png" alt="search" class="nav__img">
+            </a>
+            <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">🌙</button>
+            <a href="contacto.html" class="button--purple">Contactame</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="contact">
+            <h1 class="contact__title">Déjanos tu comentario</h1>
+            <p class="contact__subtitle">Cuéntame qué piensas del blog, tus dudas o sugerencias.</p>
+
+            <!-- Reemplaza TU_ID_AQUI por el ID que te da Formspree (formspree.io) -->
+            <form action="https://formspree.io/f/TU_ID_AQUI" method="POST" class="contact__form">
+                <div class="contact__grid">
+                    <div class="contact__field">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" placeholder="Juan Diego Avila" required name="nombre">
+                    </div>
+                    <div class="contact__field">
+                        <label for="direccion">Dirección</label>
+                        <input type="text" id="direccion" placeholder="carrera 10 #16-20" required name="direccion">
+                    </div>
+                    <div class="contact__field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="usuario@gmail.com" required name="_replyto">
+                    </div>
+                    <div class="contact__field">
+                        <label for="fecha">Fecha de tu opinión</label>
+                        <input type="date" id="fecha" required name="opinion">
+                    </div>
+                </div>
+
+                <div class="contact__field contact__field--full">
+                    <label for="comentario">Comentario</label>
+                    <textarea name="comentario" id="comentario" cols="30" rows="10" required></textarea>
+                </div>
+
+                <!-- Campos extra de Formspree -->
+                <input type="hidden" name="_subject" value="Nuevo comentario en el blog">
+                <input type="text" name="_gotcha" style="display:none">
+
+                <button type="submit" class="button--purple contact__submit">¡Enviar!</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <img src="assets/pfp.jpg" alt="Profile Picture" class="footer__pfp">
+        <div class="footer__info">
+            <span class="footer__name">Creador: Gustavo Ramirez</span>
+            <span class="footer__contact">Contacto: <a href="mailto:Hanselygustavo@gmail.com">Hanselygustavo@gmail.com</a></span>
+            <span class="footer__discord">Discord: Igvstagg</span>
+        </div>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const isDark = document.body.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            document.querySelector('.theme-toggle').textContent = isDark ? '☀️' : '🌙';
+        }
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark');
+            document.querySelector('.theme-toggle').textContent = '☀️';
+        }
+    </script>
+</body>
+</html>

@@ -383,3 +383,111 @@ body.dark .theme-toggle:hover { background-color: #3a3a5e; }
 .read-more:hover::after {
     transform: translateX(4px);
 }
+
+/* =========================================================
+   CONTACTO — FORMULARIO
+   ========================================================= */
+.contact {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 24px;
+    animation: fadeInUp 0.6s ease both;
+}
+.contact__title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+.contact__subtitle {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 32px;
+    transition: color 0.3s ease;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.contact__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.contact__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.contact__field--full { width: 100%; }
+
+.contact__field label {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #7B61FF;
+}
+
+.contact__field input,
+.contact__field textarea {
+    padding: 12px 14px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font: inherit;
+    font-size: 14px;
+    color: #1a1a2e;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+}
+.contact__field input::placeholder,
+.contact__field textarea::placeholder {
+    color: #aaa;
+}
+.contact__field input:focus,
+.contact__field textarea:focus {
+    outline: none;
+    border-color: #7B61FF;
+    box-shadow: 0 0 0 3px rgba(123, 97, 255, 0.15);
+}
+.contact__field textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.contact__submit {
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+}
+
+/* MODO OSCURO */
+body.dark .contact__title { color: #e0e0f0; }
+body.dark .contact__subtitle { color: #9090b0; }
+body.dark .contact__field input,
+body.dark .contact__field textarea {
+    background-color: #1e1e32;
+    border-color: #2a2a3e;
+    color: #e0e0f0;
+}
+body.dark .contact__field input::placeholder,
+body.dark .contact__field textarea::placeholder {
+    color: #606080;
+}
+body.dark .contact__field input:focus,
+body.dark .contact__field textarea:focus {
+    border-color: #a98bff;
+    box-shadow: 0 0 0 3px rgba(169, 139, 255, 0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contact { padding: 40px 18px; }
+    .contact__title { font-size: 26px; }
+    .contact__grid { grid-template-columns: 1fr; }
+    .contact__submit { width: 100%; text-align: center; }
+}
