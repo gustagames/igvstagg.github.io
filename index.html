@@ -30,7 +30,7 @@
                 <h1 class="banner-container__h1">Cómo la IA cambiará el futuro</h1>
                 <p class="main-p">El futuro de la IA verá robots domésticos con inteligencia mejorada, mayores capacidades y volviéndose más personales y posiblemente adorables. Por ejemplo, los robots domésticos superarán la navegación y la dirección.</p>
                 <a href="ia.html" class="botton">Read More</a>
-                <a href="contacto.html" class="botton" style="margin-top: 12px;">¡Deja tu comentario!</a>
+                <a href="#comentarios" class="botton" style="margin-top: 12px;">¡Deja tu comentario!</a>
             </div>
             <div class="banner__right">
                 <img src="assets/banner.png" alt="banner">
@@ -148,6 +148,21 @@
             </div>
         </section>
 
+        <section class="comentarios" id="comentarios">
+            <h2 class="comentarios__title">Comentarios</h2>
+
+            <form id="form-comentario" class="comentarios__form">
+                <input type="text" id="nombre" placeholder="Tu nombre" maxlength="30" required>
+                <textarea id="mensaje" placeholder="¿Qué quieres decir?" maxlength="280" required></textarea>
+                <div class="comentarios__pie">
+                    <span id="contador">0/280</span>
+                    <button type="submit" class="button--purple comentarios__btn">Publicar</button>
+                </div>
+            </form>
+
+            <ul id="lista-comentarios" class="comentarios__lista"></ul>
+        </section>
+
     </main>
 
     <footer class="footer">
@@ -170,5 +185,6 @@
             document.querySelector('.theme-toggle').textContent = '☀️';
         }
     </script>
+    <script type="module" src="comentarios.js"></script>
 </body>
 </html>
